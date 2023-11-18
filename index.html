@@ -35,6 +35,43 @@
   * Updated: November 11 2023
   * Author: https://habib-port-folio.netlify.app
   ======================================================== -->
+  <style>
+    .custom-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      background-color:rgba(14, 29, 52, 0.9); /* Set the background color */
+      color: #ffffff; /* Set the text color */
+      border-radius: 20px; /* Set the border-radius for rounded corners */
+      font-size: 14px; /* Set the font size */
+    }
+  </style>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player1', {
+            height: '400',
+            width: '100%',
+            videoId: 'VccrN2Ulb6s',
+            playerVars: {
+                'autoplay': 1, // Autoplay the video
+                'controls': 0, // Hide player controls
+                'showinfo': 0, // Hide video title and uploader information
+                'rel': 0, // Don't show related videos at the end
+                'loop': 1, // Loop the video
+                'mute': 1 // Mute the video
+            },
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+</script>
 </head>
 
 <body>
@@ -189,9 +226,11 @@
 
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start order-lg-last order-first">
-            <img src="assets/projects/al aqsa/2.jpg" class="img-fluid" alt="" style="border-radius: 20px;">
-            <a href="https://youtu.be/VccrN2Ulb6s" class="glightbox play-btn"></a>
-            
+            <!-- <img src="assets/projects/al-aqsa/2.jpg" class="img-fluid" alt="" style="border-radius: 20px;">
+            <a href="https://youtu.be/VccrN2Ulb6s" class="glightbox play-btn"></a> -->
+            <div class="card" style="border-radius: 20px; overflow: hidden;">
+              <div id="player1"></div>
+            </div>
           </div>
           <div class="col-lg-6 content order-last  order-lg-first">
             <h3>What I do?</h3>
@@ -267,19 +306,7 @@
     <!-- ======= Services Section ======= -->
     <section id="projects" class="services pt-0">
       <div class="container" data-aos="fade-up">
-        <button id="openModal">Open Modal</button>
-        <div id="imageModal" class="modal">
-            <span class="close" id="closeModal">&times;</span>
-            <div class="modal-content">
-                <div class="slider">
-                    <img class="slider-image" src="assets/img/storage-service.jpg" alt="Image 1">
-                    <img class="slider-image" src="assets/img/logistics-service.jpg" alt="Image 2">
-                    <img class="slider-image" src="assets/img/cargo-service.jpg" alt="Image 3">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-        </div>
+        
         <div class="section-header">
           <span>Projects I have DONE</span>
           <h2>Projects</h2>
@@ -289,62 +316,104 @@
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/storage-service.jpg" alt="" class="img-fluid">
+            <div class="card" style="border-radius: 20px;">
+              <div class="card-img" style="border-radius: 20px;">
+                <img src="assets/projects/al-aqsa/1.1.jpg" alt="" class="img-fluid">
+                
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Storage</a></h3>
-              <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus itaqueofficiis odit</p>
+              <h3><a href="al-aqsa.html" class="stretched-link">AL AKSA Jame Mosque</a>
+                <i class="bi bi-arrow-right-circle-fill"></i></h3>
+              <p>
+                <span class="custom-badge">Design</span>
+                <span class="custom-badge">3D Modelling</span>
+                <span class="custom-badge">Drawing</span>
+                <span class="custom-badge">Rendering</span>
+              </p>
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/logistics-service.jpg" alt="" class="img-fluid">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style="border-radius: 20px;">
+              <div class="card-img" style="border-radius: 20px;">
+                <img src="assets/projects/al-aqsa/1.1.jpg" alt="" class="img-fluid">
+                
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Logistics</a></h3>
-              <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam ducimus occaecati nisi</p>
+              <h3><a href="al-aqsa.html" class="stretched-link">AL AKSA Jame Mosque</a>
+                <i class="bi bi-arrow-right-circle-fill"></i></h3>
+              <p>
+                <span class="custom-badge">Design</span>
+                <span class="custom-badge">3D Modelling</span>
+                <span class="custom-badge">Drawing</span>
+                <span class="custom-badge">Rendering</span>
+              </p>
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/cargo-service.jpg" alt="" class="img-fluid">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style="border-radius: 20px;">
+              <div class="card-img" style="border-radius: 20px;">
+                <img src="assets/projects/al-aqsa/1.1.jpg" alt="" class="img-fluid">
+                
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Cargo</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <h3><a href="al-aqsa.html" class="stretched-link">AL AKSA Jame Mosque</a>
+                <i class="bi bi-arrow-right-circle-fill"></i></h3>
+              <p>
+                <span class="custom-badge">Design</span>
+                <span class="custom-badge">3D Modelling</span>
+                <span class="custom-badge">Drawing</span>
+                <span class="custom-badge">Rendering</span>
+              </p>
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/trucking-service.jpg" alt="" class="img-fluid">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style="border-radius: 20px;">
+              <div class="card-img" style="border-radius: 20px;">
+                <img src="assets/projects/al-aqsa/1.1.jpg" alt="" class="img-fluid">
+                
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Trucking</a></h3>
-              <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae ut et nihil</p>
+              <h3><a href="al-aqsa.html" class="stretched-link">AL AKSA Jame Mosque</a>
+                <i class="bi bi-arrow-right-circle-fill"></i></h3>
+              <p>
+                <span class="custom-badge">Design</span>
+                <span class="custom-badge">3D Modelling</span>
+                <span class="custom-badge">Drawing</span>
+                <span class="custom-badge">Rendering</span>
+              </p>
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/packaging-service.jpg" alt="" class="img-fluid">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style="border-radius: 20px;">
+              <div class="card-img" style="border-radius: 20px;">
+                <img src="assets/projects/al-aqsa/1.1.jpg" alt="" class="img-fluid">
+                
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Packaging</a></h3>
-              <p>Illo consequuntur quisquam delectus praesentium modi dignissimos facere vel cum onsequuntur maiores beatae consequatur magni voluptates</p>
+              <h3><a href="al-aqsa.html" class="stretched-link">AL AKSA Jame Mosque</a>
+                <i class="bi bi-arrow-right-circle-fill"></i></h3>
+              <p>
+                <span class="custom-badge">Design</span>
+                <span class="custom-badge">3D Modelling</span>
+                <span class="custom-badge">Drawing</span>
+                <span class="custom-badge">Rendering</span>
+              </p>
             </div>
           </div><!-- End Card Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/warehousing-service.jpg" alt="" class="img-fluid">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" style="border-radius: 20px;">
+              <div class="card-img" style="border-radius: 20px;">
+                <img src="assets/projects/al-aqsa/1.1.jpg" alt="" class="img-fluid">
+                
               </div>
-              <h3><a href="service-details.html" class="stretched-link">Warehousing</a></h3>
-              <p>Quas assumenda non occaecati molestiae. In aut earum sed natus eatae in vero. Ab modi quisquam aut nostrum unde et qui est non quo nulla</p>
+              <h3><a href="al-aqsa.html" class="stretched-link">AL AKSA Jame Mosque</a>
+                <i class="bi bi-arrow-right-circle-fill"></i></h3>
+              <p>
+                <span class="custom-badge">Design</span>
+                <span class="custom-badge">3D Modelling</span>
+                <span class="custom-badge">Drawing</span>
+                <span class="custom-badge">Rendering</span>
+              </p>
             </div>
           </div><!-- End Card Item -->
 
@@ -354,7 +423,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Call To Action Section ======= -->
-    <section id="call-to-action" class="call-to-action">
+    <!-- <section id="call-to-action" class="call-to-action">
       <div class="container" data-aos="zoom-out">
         <div class="section-header">
           <span>Experience</span>
@@ -374,7 +443,8 @@
         </div>
 
       </div>
-    </section><!-- End Call To Action Section -->
+    </section> -->
+    <!-- End Call To Action Section -->
 
     <!-- ======= Features Section ======= -->
     <section id="experience" class="features">
@@ -602,7 +672,7 @@
     <!-- End Testimonials Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq">
+    <!-- <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -628,7 +698,7 @@
                     Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div>
 
               <div class="accordion-item">
                 <h3 class="accordion-header">
@@ -642,50 +712,9 @@
                     Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
                   </div>
                 </div>
-              </div><!-- # Faq item-->
+              </div>
 
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
-                  </button>
-                </h3>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                  </button>
-                </h3>
-                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                  </button>
-                </h3>
-                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
+              
 
             </div>
 
@@ -693,7 +722,8 @@
         </div>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section> -->
+    <!-- End Frequently Asked Questions Section -->
 
   </main><!-- End #main -->
 

@@ -913,6 +913,14 @@ section {
   width: 50%;
 }
 
+/* Media query for screens with a max-width of 768px (typical tablet and mobile sizes) */
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    /* Change width to 100% on mobile devices */
+    width: 100%;
+  }
+}
+
 .close {
   background-color: white;
   position: absolute;
